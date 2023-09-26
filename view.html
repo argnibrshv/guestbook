@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>guestbook</title>
+</head>
+
+<body>
+	<h1>Гостевая книга</h1>
+	<div>
+		Количество подписей: {{ .SignaturesCount }} -
+		<a href="/guestbook/new">Добавить свою подпись</a>
+	</div>
+	<div>
+		{{range .Signatures}}
+		<p>{{ . }}</p>
+		{{end}}
+	</div>
+</body>
+
+</html>
